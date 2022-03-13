@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//get all data from contact table
+Route::get('contact', 'App\Http\Controllers\Contact\ContactController@contact' );
+//get data by Id from contact table
+//Route::get('contact/{contactId}', 'App\Http\Controllers\Contact\ContactController@contactById' );
